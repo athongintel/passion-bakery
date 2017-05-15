@@ -5,3 +5,9 @@ html, body {
 body {
   background-image: url("/assets/images/background.png");
   background-repeat: repeat; }
+
+* {
+  transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -o-transition: all .2s linear; }

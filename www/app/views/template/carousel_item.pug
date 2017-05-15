@@ -1,0 +1,5 @@
+mixin carousel_item(data)
+	.item(class = data.active? 'active' : '')
+		div.title
+			span #{data.title}
+		img(src='/assets/images/carousel/'+ data.src+'.jpg')

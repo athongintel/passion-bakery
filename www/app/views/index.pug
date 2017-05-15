@@ -1,7 +1,10 @@
 extends ./layout/application
+include ./template/pinned_product
+include ./template/carousel_item
 
 block content
 	link(rel='stylesheet', href='/assets/css/index.css')
+
 	#myCarousel.carousel.slide(data-ride='carousel')
 		//-- Indicators
 		ol.carousel-indicators
@@ -10,18 +13,8 @@ block content
 			li(data-target='#myCarousel', data-slide-to='2')
 		//-- Wrapper for slides
 		.carousel-inner
-			.item.active
-				div.title
-					span This is a bread
-				img(src='/assets/images/carousel/carousel-0.jpg', style='width:100%;')
-			.item
-				div.title
-					span This is an other bread
-				img(src='/assets/images/carousel/carousel-1.jpg', style='width:100%;')
-			.item
-				div.title
-					span This is not a bread
-				img(src='/assets/images/carousel/carousel-2.jpg', style='width:100%;')
+			each ii in [0, 1, 2]
+				+carousel_item({'title': carousel[ii], 'src': ii, 'active': ii==0})
 		//-- Left and right controls
 		a.left.carousel-control(href='#myCarousel', data-slide='prev')
 			span.glyphicon.glyphicon-chevron-left
@@ -29,3 +22,32 @@ block content
 		a.right.carousel-control(href='#myCarousel', data-slide='next')
 			span.glyphicon.glyphicon-chevron-right
 			span.sr-only Next
+
+	div.container
+		div.row.pin-products
+			each ii in [0, 1, 2, 3, 4, 5]
+				+pinned_product({'src': ii, 'title': pinned_products[ii]})
+
+	div.section
+		div.container
+			div.row.chef_info
+				div.col-xs-4
+					img(src='/assets/images/chef_photo.jpg')
+				div.col-xs-8
+					div.title #{chefInfo.title}
+					div.content #{chefInfo.content}
+
+	div.section
+		div.container
+			div.row.social
+				div.col-xs-12
+					div.content #{social.content}
+					a.link(href='https://www.facebook.com/Passion-Bakery-1423480781278892/')
+						div
+							img(src='/assets/images/social/facebook.png')
+
+
+
+
+
+

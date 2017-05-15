@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Comfortaa|Pacifico|Rasa);
+@import url(https://fonts.googleapis.com/css?family=Comfortaa|Pacifico|Rasa|Montserrat);
 .brand {
   padding: 20px 0px; }
   .brand table {
@@ -29,6 +29,10 @@
         float: right; } }
     .brand .brand-info td {
       color: #886e36; }
+    .brand .brand-info td:nth-child(2) {
+      padding-right: 30px;
+      border-right: 1px solid;
+      border-color: #886e36; }
     .brand .brand-info span.fa {
       font-size: 30px;
       padding: 10px;
@@ -39,16 +43,36 @@
 
 .stuck-container {
   background-color: #e7931a; }
-  .stuck-container .nav.navbar-nav.navbar-left {
-    background-color: #e7931a; }
-    .stuck-container .nav.navbar-nav.navbar-left li a {
+  .stuck-container .navbar-default {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    margin: 0px; }
+  .stuck-container .nav.navbar-nav {
+    background: #e7931a; }
+    .stuck-container .nav.navbar-nav li a {
       color: #ffffff;
       padding: 22px 20px 19px 19px;
       font-size: 16px;
-      line-height: 1.2;
       font-weight: 900;
       font-family: 'Rasa', serif;
       text-transform: uppercase;
       transition: 0.2s; }
-    .stuck-container .nav.navbar-nav.navbar-left li a:hover, .stuck-container .nav.navbar-nav.navbar-left li.active {
-      background-color: #be1e2d; }
+    .stuck-container .nav.navbar-nav li a:hover {
+      background: #be1e2d !important; }
+    .stuck-container .nav.navbar-nav li.active > a, .stuck-container .nav.navbar-nav li.open > a {
+      background: #be1e2d !important; }
+  .stuck-container .nav.navbar-nav .dropdown-language {
+    background-color: #e7931a; }
+    .stuck-container .nav.navbar-nav .dropdown-language a {
+      color: black; }
+      .stuck-container .nav.navbar-nav .dropdown-language a span {
+        padding-left: 20px; }
+      .stuck-container .nav.navbar-nav .dropdown-language a img {
+        max-height: 20px; }
+    .stuck-container .nav.navbar-nav .dropdown-language a.select {
+      padding-left: 50px;
+      color: white !important;
+      background-color: #e7931a; }
+    .stuck-container .nav.navbar-nav .dropdown-language a:hover {
+      color: white; }

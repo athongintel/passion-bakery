@@ -2,6 +2,7 @@ var express = require('express');
 var mongoose = require('mongoose');
 var session = require('express-session');
 var bodyParser  = require('body-parser');
+var cookieParser = require('cookie-parser');
 var http = require('http');
 var path = require('path');
 var sass = require('node-sass-middleware');
@@ -20,6 +21,7 @@ var mongoose = require('mongoose');
 // });
 
 //-- middleware init
+app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(session({

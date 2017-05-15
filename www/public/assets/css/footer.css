@@ -1,0 +1,13 @@
+@import url(https://fonts.googleapis.com/css?family=Comfortaa|Pacifico|Rasa|Montserrat);
+.footer {
+  text-align: center;
+  background: #efe0c6; }
+  .footer .container {
+    padding: 20px; }
+    .footer .container .page-name {
+      font-size: 30px;
+      font-family: 'Pacifico', cursive; }
+    .footer .container .copy-right {
+      padding-top: 20px;
+      font-size: 14px;
+      font-style: italic; }

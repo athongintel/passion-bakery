@@ -1,0 +1,20 @@
+@import 'variables';
+
+.footer{
+	text-align: center;
+	background: $footer_background_color;
+	.container{
+		padding: 20px;
+		
+		.page-name{
+			font-size: 30px;
+			font-family: 'Pacifico', cursive;
+		}
+		.copy-right{
+			padding-top: 20px;
+			font-size: 14px;
+			font-style: italic;
+		}
+	}
+
+}

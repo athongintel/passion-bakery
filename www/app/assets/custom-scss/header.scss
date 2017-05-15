@@ -39,6 +39,11 @@
 		td{
 			color: $accent_text_color_light;
 		}
+		td:nth-child(2){
+			padding-right: 30px;
+			border-right: 1px solid;
+			border-color: $accent_text_color_light;
+		}
 
 		span.fa{
 			font-size: 30px;
@@ -55,21 +60,52 @@
 
 .stuck-container{
 	background-color: $menu_background_color;
-	.nav.navbar-nav.navbar-left{
-		background-color: $menu_background_color;
+	.navbar-default{
+		border: none;
+	    background: transparent;
+	    box-shadow: none;
+	    margin: 0px;
+	}
+	.nav.navbar-nav{
+		background: $menu_background_color;
 		li {
 			a {
 				color: #ffffff;
 				padding: 22px 20px 19px 19px;
 				font-size: 16px;
-				line-height: 1.2;
 				font-weight: 900;
 				font-family: 'Rasa', serif;
 				text-transform: uppercase;
 				transition:	0.2s;
 			}
-			a:hover, &.active{
-				background-color: $menu_active_background_color;
+			a:hover{
+				background: $menu_active_background_color !important;
+			}
+		}
+		li.active > a,li.open > a{
+			background: $menu_active_background_color !important;
+		}
+	}
+	.nav.navbar-nav{
+		.dropdown-language{
+			background-color: $menu_background_color;
+			a{
+				
+				color: black;
+				span{
+					padding-left: 20px;
+				}
+				img{
+					max-height: 20px;
+				}
+			}
+			a.select{
+				padding-left: 50px;
+				color: $menu_item_color !important;
+				background-color: $menu_background_color;
+			}
+			a:hover{
+				color: $menu_item_color;
 			}
 		}
 	}

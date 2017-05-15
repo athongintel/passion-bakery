@@ -17,46 +17,42 @@ div.container.brand
 					td
 						span.fa.fa-phone
 					td
+						div #{t['phone'] + ':'}
 						div Mrs. Hieu Ngo
 						div 0914 005 977
 					td
 						span.fa.fa-map-marker
 					td
-						div Address
-						div 51/9 Truong Chi Cuong
-						div Da Nang
+						div #{t['address'] + ':'}
+						div 51/9 Trương Chí Cương
+						div Đà Nẵng
 
 div#stuck_container.stuck-container
 	div.container
-		nav
-			ul.nav.navbar-nav.navbar-left(data-type='navbar')
-				li.active
-					a(href='./') Home
-				li
-					a(href='index-1.html') About us
-				li
-					a(href='index-2.html') Products
-				li.dropdown
-					a.sf-with-ul(href='index-3.html') Recipe Corner
-					ul.dropdown-menu(style='display: none;')
-						li
-							a(href='#')  Levain Walnut Baguette
-						li
-							a(href='#')  Pizza Round
-						li
-							a.sf-with-ul(href='#')  Sourdough Bragel
-							ul.dropdown-menu(style='display: none;')
+		nav.navbar.navbar-default(role='navigation')
+			div.navbar-header
+				button.navbar-toggle(data-target='#navbar', data-toggle='collapse')
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+			div#navbar.navbar-collapse.collapse
+				ul.nav.navbar-nav.navbar-left
+					li.active
+						a(href='./') #{t['home']}
+					li
+						a(href='index-1.html') #{t['our_passion']}
+					li
+						a(href='index-4.html') #{t['classes']}
+					li
+						a(href='index-5.html') #{t['contact_us']}
+
+				ul.nav.navbar-nav.navbar-right
+					li.dropdown.dropdown-language
+						a.dropdown-toggle(data-toggle='dropdown')
+							img(src=languages[preferedLanguage].icon)
+						ul.dropdown-menu.dropdown-language
+							each lang in languages
 								li
-									a(href='#') Description
-								li
-									a(href='#') Ingredients
-								li
-									a(href='#') Details
-						li
-							a(href='#')  Cranberry Orange Scone
-						li
-							a(href='#')  Cinnamon Rolls
-				li
-					a(href='index-4.html') News & Events
-				li
-					a(href='index-5.html') Contact Us
+									a.select
+										img(src=lang.icon)
+										span #{lang.desc}
