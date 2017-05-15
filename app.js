@@ -11,7 +11,7 @@ var config = require('./config.js');
 var app = express();
 
 //-- connect to database
-var mongoose = require('mongoose');
+// var mongoose = require('mongoose');
 // mongoose.connect("mongodb://localhost/drawlove-db", function(error){
 // 	if (error){
 // 		console.log('Error: Cannot connect to database. App exits.');
@@ -32,20 +32,22 @@ app.use(session({
 }));
 app.set('views', path.join(__dirname, 'www', 'app', 'views'));
 app.set('view engine', 'pug');
-app.use(
-	sass({
-        src: path.join(__dirname, 'www', 'app', 'assets', 'scss'),
-        dest: path.join(__dirname, 'www', 'public', 'assets', 'css'),
-        prefix: '/assets/css'
-    })
-);
-app.use(
-	sass({
-        src: path.join(__dirname, 'www', 'app', 'assets', 'custom-scss'),
-        dest: path.join(__dirname, 'www', 'public', 'assets', 'css'),
-        prefix: '/assets/css'
-    })
-);
+if (config.env != 'production'){
+    app.use(
+    	sass({
+            src: path.join(__dirname, 'www', 'app', 'assets', 'scss'),
+            dest: path.join(__dirname, 'www', 'public', 'assets', 'css'),
+            prefix: '/assets/css'
+        })
+    );
+    app.use(
+    	sass({
+            src: path.join(__dirname, 'www', 'app', 'assets', 'custom-scss'),
+            dest: path.join(__dirname, 'www', 'public', 'assets', 'css'),
+            prefix: '/assets/css'
+        })
+    );
+}
 app.use('/', express.static(path.join(__dirname, 'www', 'public')));
 
 //-- routing
