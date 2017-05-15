@@ -1,6 +1,6 @@
 var config = {
 	host: "http://passion-bakery.com",
-	port: 8082
+	port: 8081
 }
 
 config.fullHost = config.host + ":" + config.port;
