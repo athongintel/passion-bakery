@@ -5,8 +5,6 @@ var bodyParser  = require('body-parser');
 var cookieParser = require('cookie-parser');
 var http = require('http');
 var path = require('path');
-var sass = require('node-sass-middleware');
-
 var config = require('./config.js');
 var app = express();
 
@@ -32,7 +30,9 @@ app.use(session({
 }));
 app.set('views', path.join(__dirname, 'www', 'app', 'views'));
 app.set('view engine', 'pug');
+
 if (config.env != 'production'){
+    var sass = require('node-sass-middleware');
     app.use(
     	sass({
             src: path.join(__dirname, 'www', 'app', 'assets', 'scss'),
@@ -48,6 +48,7 @@ if (config.env != 'production'){
         })
     );
 }
+
 app.use('/', express.static(path.join(__dirname, 'www', 'public')));
 
 //-- routing
