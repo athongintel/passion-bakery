@@ -1,0 +1,11 @@
+.carousel .carousel-inner .item .title {
+  position: absolute;
+  top: 45%;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  text-align: center; }
+  .carousel .carousel-inner .item .title span {
+    color: white;
+    font-size: 50px;
+    font-family: Rasa; }

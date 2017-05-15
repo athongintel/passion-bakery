@@ -1,0 +1,31 @@
+extends ./layout/application
+
+block content
+	link(rel='stylesheet', href='/assets/css/index.css')
+	#myCarousel.carousel.slide(data-ride='carousel')
+		//-- Indicators
+		ol.carousel-indicators
+			li.active(data-target='#myCarousel', data-slide-to='0')
+			li(data-target='#myCarousel', data-slide-to='1')
+			li(data-target='#myCarousel', data-slide-to='2')
+		//-- Wrapper for slides
+		.carousel-inner
+			.item.active
+				div.title
+					span This is a bread
+				img(src='/assets/images/carousel/carousel-0.jpg', style='width:100%;')
+			.item
+				div.title
+					span This is an other bread
+				img(src='/assets/images/carousel/carousel-1.jpg', style='width:100%;')
+			.item
+				div.title
+					span This is not a bread
+				img(src='/assets/images/carousel/carousel-2.jpg', style='width:100%;')
+		//-- Left and right controls
+		a.left.carousel-control(href='#myCarousel', data-slide='prev')
+			span.glyphicon.glyphicon-chevron-left
+			span.sr-only Previous
+		a.right.carousel-control(href='#myCarousel', data-slide='next')
+			span.glyphicon.glyphicon-chevron-right
+			span.sr-only Next

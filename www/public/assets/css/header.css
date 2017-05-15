@@ -1,0 +1,54 @@
+@import url(https://fonts.googleapis.com/css?family=Comfortaa|Pacifico|Rasa);
+.brand {
+  padding: 20px 0px; }
+  .brand table {
+    display: inline-block; }
+  .brand .brand-header {
+    text-align: center; }
+    .brand .brand-header img.logo {
+      max-width: 80px; }
+    .brand .brand-header .brand-header-name {
+      padding-left: 10px;
+      display: inline-block;
+      font-size: 40px;
+      color: #473816;
+      font-weight: 900;
+      font-family: 'Pacifico', cursive; }
+    .brand .brand-header .brand-header-slogan {
+      font-size: 16px;
+      padding-left: 20px;
+      margin-top: -10px;
+      color: #886e36;
+      font-weight: 100;
+      font-family: 'Comfortaa', cursive; }
+  .brand .brand-info {
+    margin-top: 20px;
+    text-align: center; }
+    @media screen and (min-width: 768px) {
+      .brand .brand-info {
+        float: right; } }
+    .brand .brand-info td {
+      color: #886e36; }
+    .brand .brand-info span.fa {
+      font-size: 30px;
+      padding: 10px;
+      margin-left: 20px; }
+    .brand .brand-info div {
+      font-family: 'Rasa', serif;
+      white-space: pre; }
+
+.stuck-container {
+  background-color: #e7931a; }
+  .stuck-container .nav.navbar-nav.navbar-left {
+    background-color: #e7931a; }
+    .stuck-container .nav.navbar-nav.navbar-left li a {
+      color: #ffffff;
+      padding: 22px 20px 19px 19px;
+      font-size: 16px;
+      line-height: 1.2;
+      font-weight: 900;
+      font-family: 'Rasa', serif;
+      text-transform: uppercase;
+      transition: 0.2s; }
+    .stuck-container .nav.navbar-nav.navbar-left li a:hover, .stuck-container .nav.navbar-nav.navbar-left li.active {
+      background-color: #be1e2d; }
