@@ -66,6 +66,12 @@
 	    box-shadow: none;
 	    margin: 0px;
 	}
+	.navbar-brand{
+		font-size: 20px;
+		color: $accent_text_color;
+		font-weight: 900;
+		font-family: 'Pacifico', cursive;
+	}
 	.nav.navbar-nav{
 		background: $menu_background_color;
 		li {

@@ -14,13 +14,20 @@
       .carousel .carousel-inner .item .title span {
         font-size: 30px; } }
 
+.carousel .carousel-inner .item .image-holder {
+  height: 350px;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
 .pin-products {
   padding: 20px 0px; }
   .pin-products .product {
     text-align: center;
-    margin: 30px 0px; }
+    padding: 0px; }
     .pin-products .product img {
-      max-width: 100%; }
+      max-width: 100%;
+      padding: 20px;
+      padding-bottom: 0px; }
     .pin-products .product div.title {
       margin-top: 5px;
       color: #be1e2d;
@@ -37,10 +44,12 @@
   font-family: 'Rasa', cursive; }
   .chef_info img {
     width: 100%;
-    max-width: 300px; }
+    max-width: 300px;
+    margin-bottom: 20px; }
   .chef_info .title {
     color: #be1e2d;
-    font-size: 40px; }
+    font-size: 30px;
+    line-height: 30px; }
   .chef_info .content {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px; }
@@ -54,11 +63,14 @@
     font-size: 16px;
     color: #473816;
     font-family: 'Montserrat', sans-serif; }
+    @media screen and (max-width: 767px) {
+      .social .content {
+        font-size: 13px; } }
   .social .link {
     cursor: pointer; }
     .social .link > div {
-      width: 100%;
-      margin: auto;
+      left: 0px;
+      right: 0px;
       position: absolute;
       top: 50px; }
       .social .link > div img {

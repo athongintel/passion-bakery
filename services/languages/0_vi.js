@@ -7,7 +7,7 @@
 		address: 'Địa chỉ',
 
 		//----------B-----------
-		
+		brand: 'Passion Bakery',
 
 		//----------C-----------
 		classes: 'Lớp học',
@@ -19,7 +19,7 @@
 		//----------E-rror-------
 		
 		//----------F-----------
-		
+		follow_us_on: 'Theo dõi chúng tôi trên',
 		
 		//----------H-----------
 		home: 'Trang chủ',

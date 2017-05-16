@@ -1,6 +1,12 @@
 link(rel='stylesheet', href='assets/css/header.css')
 
-div.container.brand
+script.
+	function setLanguage(lang){
+		Cookies.set('preferedLanguage', lang);
+		location.reload();
+	}
+
+div.container.brand.hidden-xs
 	div.col-sm-6.col-xs-12
 		div.navbar-header.brand-header
 			table
@@ -30,6 +36,7 @@ div.container.brand
 div#stuck_container.stuck-container
 	div.container
 		nav.navbar.navbar-default(role='navigation')
+			div.navbar-brand.visible-xs #{t['brand']}
 			div.navbar-header
 				button.navbar-toggle(data-target='#navbar', data-toggle='collapse')
 					span.icon-bar
@@ -52,7 +59,7 @@ div#stuck_container.stuck-container
 							img(src=languages[preferedLanguage].icon)
 						ul.dropdown-menu.dropdown-language
 							each lang in languages
-								li
+								li(onClick='setLanguage("'+lang.name+'")')
 									a.select
 										img(src=lang.icon)
 										span #{lang.desc}

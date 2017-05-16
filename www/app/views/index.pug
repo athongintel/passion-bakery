@@ -31,9 +31,9 @@ block content
 	div.section
 		div.container
 			div.row.chef_info
-				div.col-xs-4
+				div.col-xs-12.col-sm-4
 					img(src='/assets/images/chef_photo.jpg')
-				div.col-xs-8
+				div.col-xs-12.col-sm-8
 					div.title #{chefInfo.title}
 					div.content #{chefInfo.content}
 
@@ -41,7 +41,7 @@ block content
 		div.container
 			div.row.social
 				div.col-xs-12
-					div.content #{social.content}
+					div.content #{t['follow_us_on']}
 					a.link(href='https://www.facebook.com/Passion-Bakery-1423480781278892/')
 						div
 							img(src='/assets/images/social/facebook.png')

@@ -4,7 +4,8 @@ var path = require('path');
 const languageDir = './languages/';
 
 var LanguageServices = {
-    languages : []
+    langNames: [],
+    languages : {}
 };
 
 fs.readdir(path.join(__dirname, languageDir), function(err, files){
@@ -13,15 +14,12 @@ fs.readdir(path.join(__dirname, languageDir), function(err, files){
             try{
                 var lang = require(path.join(__dirname, languageDir, file));
                 if (lang.name){
-                    LanguageServices.languages.push(lang);
+                    LanguageServices.langNames.push(lang.name);
+                    LanguageServices.languages[lang.name] = lang;
                     console.log('language found: ' + file);
-                }
-                else{
-                    console.log('language file: ' + file + ' bad format');
                 }
             }
             catch(e){
-                console.log('error require: '  + file);
                 console.log(e);
             }
         });

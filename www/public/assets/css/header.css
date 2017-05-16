@@ -48,6 +48,11 @@
     background: transparent;
     box-shadow: none;
     margin: 0px; }
+  .stuck-container .navbar-brand {
+    font-size: 20px;
+    color: #473816;
+    font-weight: 900;
+    font-family: 'Pacifico', cursive; }
   .stuck-container .nav.navbar-nav {
     background: #e7931a; }
     .stuck-container .nav.navbar-nav li a {
