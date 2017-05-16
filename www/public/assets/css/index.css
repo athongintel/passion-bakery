@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Comfortaa|Pacifico|Rasa|Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Comfortaa|Pacifico|Lora|Montserrat);
 .carousel .carousel-inner .item .title {
   position: absolute;
   top: 45%;
@@ -9,7 +9,7 @@
   .carousel .carousel-inner .item .title span {
     color: white;
     font-size: 50px;
-    font-family: 'Rasa', cursive; }
+    font-family: 'Lora', cursive; }
     @media screen and (max-width: 1199px) {
       .carousel .carousel-inner .item .title span {
         font-size: 30px; } }
@@ -41,15 +41,14 @@
   padding: 40px; }
 
 .chef_info {
-  font-family: 'Rasa', cursive; }
+  font-family: 'Lora', cursive; }
   .chef_info img {
     width: 100%;
     max-width: 300px;
     margin-bottom: 20px; }
   .chef_info .title {
     color: #be1e2d;
-    font-size: 30px;
-    line-height: 30px; }
+    font-size: 30px; }
   .chef_info .content {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px; }

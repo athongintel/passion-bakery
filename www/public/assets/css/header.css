@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Comfortaa|Pacifico|Rasa|Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Comfortaa|Pacifico|Lora|Montserrat);
 .brand {
   padding: 20px 0px; }
   .brand table {
@@ -38,7 +38,7 @@
       padding: 10px;
       margin-left: 20px; }
     .brand .brand-info div {
-      font-family: 'Rasa', serif;
+      font-family: 'Lora', serif;
       white-space: pre; }
 
 .stuck-container {
@@ -60,7 +60,7 @@
       padding: 22px 20px 19px 19px;
       font-size: 16px;
       font-weight: 900;
-      font-family: 'Rasa', serif;
+      font-family: 'Lora', serif;
       text-transform: uppercase;
       transition: 0.2s; }
     .stuck-container .nav.navbar-nav li a:hover {
